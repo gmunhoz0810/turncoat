@@ -1,0 +1,248 @@
+{
+ "what": "node-exact confusion counts on the 12 held-out meshes: tp = flagged truth-OFF nodes, fp = flagged truth-ON nodes, off / on = truth-OFF / truth-ON nodes (nodes the truth does not label are not scored)",
+ "truth": "each node's sheet from the same segment's registration on its scroll's 2.2-2.4 um scan; OFF = not on the majority sheet of its spiral turn",
+ "per_mesh": {
+  "w029": {
+   "scroll": "PHerc0139",
+   "turncoat": {
+    "tp": 1358,
+    "fp": 1334,
+    "off": 4762,
+    "on": 72893
+   },
+   "tifxyz-doctor": {
+    "tp": 2,
+    "fp": 10,
+    "off": 4762,
+    "on": 72893
+   }
+  },
+  "w034": {
+   "scroll": "PHerc0139",
+   "turncoat": {
+    "tp": 9125,
+    "fp": 4770,
+    "off": 17179,
+    "on": 46400
+   },
+   "tifxyz-doctor": {
+    "tp": 14,
+    "fp": 47,
+    "off": 17179,
+    "on": 46400
+   }
+  },
+  "p5a": {
+   "scroll": "PHerc0500P2",
+   "turncoat": {
+    "tp": 3225,
+    "fp": 316,
+    "off": 6142,
+    "on": 3652
+   },
+   "tifxyz-doctor": {
+    "tp": 373,
+    "fp": 82,
+    "off": 6142,
+    "on": 3652
+   }
+  },
+  "p5b": {
+   "scroll": "PHerc0500P2",
+   "turncoat": {
+    "tp": 1507,
+    "fp": 179,
+    "off": 5651,
+    "on": 4493
+   },
+   "tifxyz-doctor": {
+    "tp": 214,
+    "fp": 118,
+    "off": 5651,
+    "on": 4493
+   }
+  },
+  "p814b": {
+   "scroll": "PHerc0814",
+   "turncoat": {
+    "tp": 7220,
+    "fp": 1235,
+    "off": 12631,
+    "on": 6731
+   },
+   "tifxyz-doctor": {
+    "tp": 0,
+    "fp": 0,
+    "off": 12631,
+    "on": 6731
+   }
+  },
+  "p814c": {
+   "scroll": "PHerc0814",
+   "turncoat": {
+    "tp": 2859,
+    "fp": 12892,
+    "off": 13801,
+    "on": 15018
+   },
+   "tifxyz-doctor": {
+    "tp": 118,
+    "fp": 6,
+    "off": 13801,
+    "on": 15018
+   }
+  },
+  "p841a": {
+   "scroll": "PHerc0841",
+   "turncoat": {
+    "tp": 7373,
+    "fp": 1196,
+    "off": 9898,
+    "on": 5552
+   },
+   "tifxyz-doctor": {
+    "tp": 409,
+    "fp": 77,
+    "off": 9898,
+    "on": 5552
+   }
+  },
+  "p841b": {
+   "scroll": "PHerc0841",
+   "turncoat": {
+    "tp": 7709,
+    "fp": 2431,
+    "off": 10671,
+    "on": 4131
+   },
+   "tifxyz-doctor": {
+    "tp": 389,
+    "fp": 134,
+    "off": 10671,
+    "on": 4131
+   }
+  },
+  "w025": {
+   "scroll": "PHerc0139",
+   "turncoat": {
+    "tp": 68,
+    "fp": 129,
+    "off": 2402,
+    "on": 71507
+   },
+   "tifxyz-doctor": {
+    "tp": 8,
+    "fp": 55,
+    "off": 2402,
+    "on": 71507
+   }
+  },
+  "w028": {
+   "scroll": "PHerc0139",
+   "turncoat": {
+    "tp": 1413,
+    "fp": 530,
+    "off": 4872,
+    "on": 73413
+   },
+   "tifxyz-doctor": {
+    "tp": 6,
+    "fp": 3,
+    "off": 4872,
+    "on": 73413
+   }
+  },
+  "p814e": {
+   "scroll": "PHerc0814",
+   "turncoat": {
+    "tp": 9015,
+    "fp": 7137,
+    "off": 14463,
+    "on": 33976
+   },
+   "tifxyz-doctor": {
+    "tp": 0,
+    "fp": 0,
+    "off": 14463,
+    "on": 33976
+   }
+  },
+  "p5c": {
+   "scroll": "PHerc0500P2",
+   "turncoat": {
+    "tp": 507,
+    "fp": 145,
+    "off": 5056,
+    "on": 4517
+   },
+   "tifxyz-doctor": {
+    "tp": 220,
+    "fp": 165,
+    "off": 5056,
+    "on": 4517
+   }
+  }
+ },
+ "summary": {
+  "fresh12": {
+   "turncoat": {
+    "R": 47.8,
+    "P": 61.4,
+    "F1": 0.537
+   },
+   "tifxyz-doctor": {
+    "R": 1.6,
+    "P": 71.6,
+    "F1": 0.032
+   }
+  },
+  "PHerc0139": {
+   "turncoat": {
+    "R": 41.0,
+    "P": 63.9,
+    "F1": 0.499
+   },
+   "tifxyz-doctor": {
+    "R": 0.1,
+    "P": 20.7,
+    "F1": 0.002
+   }
+  },
+  "PHerc0500P2": {
+   "turncoat": {
+    "R": 31.1,
+    "P": 89.1,
+    "F1": 0.461
+   },
+   "tifxyz-doctor": {
+    "R": 4.8,
+    "P": 68.9,
+    "F1": 0.09
+   }
+  },
+  "PHerc0814": {
+   "turncoat": {
+    "R": 46.7,
+    "P": 47.3,
+    "F1": 0.47
+   },
+   "tifxyz-doctor": {
+    "R": 0.3,
+    "P": 95.2,
+    "F1": 0.006
+   }
+  },
+  "PHerc0841": {
+   "turncoat": {
+    "R": 73.3,
+    "P": 80.6,
+    "F1": 0.768
+   },
+   "tifxyz-doctor": {
+    "R": 3.9,
+    "P": 79.1,
+    "F1": 0.074
+   }
+  }
+ }
+}

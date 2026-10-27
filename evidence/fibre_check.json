@@ -1,0 +1,162 @@
+{
+ "what": "outside check with automatic fibres (AFV fibre model V2 + AVF spline generator, pinned Hugging Face revisions) in 84 random 256^3 regions of the 2.2-2.4 um scans (6 per mesh, chosen without the truth or any detector, seed 20261026)",
+ "fibre_pairs": "a fibre crossing a node's normal line at the node's own sheet (SAME) or one layer away (DIFFERENT) relates node pairs; pos = pairs on two sheets; a detector calls a pair 'two sheets' when exactly one node is flagged",
+ "verified_nodes": "nodes where the truth and the fibres agree; pos = such nodes that are off-sheet",
+ "fresh12": {
+  "pairs": 55311,
+  "pairs_diff": 22662,
+  "truth_pairs": 24482,
+  "truth_pair_agree": 19219,
+  "verified_nodes": {
+   "tifxyz-doctor": {
+    "R": 1.0,
+    "P": 41.9,
+    "F1": 0.02,
+    "tp": 13,
+    "fp": 18,
+    "pos": 1246
+   },
+   "turncoat": {
+    "R": 38.3,
+    "P": 45.6,
+    "F1": 0.416,
+    "tp": 477,
+    "fp": 569,
+    "pos": 1246
+   }
+  },
+  "verified_off": 1246,
+  "fibre_pairs": {
+   "tifxyz-doctor": {
+    "R": 2.1,
+    "P": 66.3,
+    "F1": 0.041,
+    "tp": 485,
+    "fp": 247,
+    "pos": 22662
+   },
+   "turncoat": {
+    "R": 14.0,
+    "P": 69.9,
+    "F1": 0.234,
+    "tp": 3177,
+    "fp": 1369,
+    "pos": 22662
+   }
+  }
+ },
+ "dev": {
+  "pairs": 11296,
+  "pairs_diff": 3066,
+  "truth_pairs": 7637,
+  "truth_pair_agree": 6525,
+  "verified_nodes": {
+   "turncoat": {
+    "R": 96.3,
+    "P": 98.8,
+    "F1": 0.976,
+    "tp": 422,
+    "fp": 5,
+    "pos": 438
+   }
+  },
+  "verified_off": 438,
+  "fibre_pairs": {
+   "turncoat": {
+    "R": 26.1,
+    "P": 73.3,
+    "F1": 0.385,
+    "tp": 801,
+    "fp": 292,
+    "pos": 3066
+   }
+  }
+ },
+ "per_mesh": {
+  "p5a": {
+   "pairs": 2971,
+   "pairs_diff": 1130,
+   "truth_pairs": 573,
+   "truth_pair_agree": 395
+  },
+  "p5b": {
+   "pairs": 3429,
+   "pairs_diff": 1410,
+   "truth_pairs": 956,
+   "truth_pair_agree": 749
+  },
+  "p5c": {
+   "pairs": 2659,
+   "pairs_diff": 1034,
+   "truth_pairs": 975,
+   "truth_pair_agree": 750
+  },
+  "p814b": {
+   "pairs": 5337,
+   "pairs_diff": 2469,
+   "truth_pairs": 1855,
+   "truth_pair_agree": 1350
+  },
+  "p814c": {
+   "pairs": 5689,
+   "pairs_diff": 1639,
+   "truth_pairs": 4781,
+   "truth_pair_agree": 3657
+  },
+  "p814e": {
+   "pairs": 7802,
+   "pairs_diff": 3159,
+   "truth_pairs": 3077,
+   "truth_pair_agree": 2404
+  },
+  "p841a": {
+   "pairs": 3825,
+   "pairs_diff": 1692,
+   "truth_pairs": 1082,
+   "truth_pair_agree": 848
+  },
+  "p841b": {
+   "pairs": 4630,
+   "pairs_diff": 2785,
+   "truth_pairs": 1195,
+   "truth_pair_agree": 877
+  },
+  "w025": {
+   "pairs": 3916,
+   "pairs_diff": 1328,
+   "truth_pairs": 2396,
+   "truth_pair_agree": 1946
+  },
+  "w028": {
+   "pairs": 4821,
+   "pairs_diff": 1687,
+   "truth_pairs": 2390,
+   "truth_pair_agree": 1816
+  },
+  "w029": {
+   "pairs": 5466,
+   "pairs_diff": 2245,
+   "truth_pairs": 3291,
+   "truth_pair_agree": 2881
+  },
+  "w034": {
+   "pairs": 4766,
+   "pairs_diff": 2084,
+   "truth_pairs": 1911,
+   "truth_pair_agree": 1546
+  },
+  "w045": {
+   "pairs": 5144,
+   "pairs_diff": 1349,
+   "truth_pairs": 3319,
+   "truth_pair_agree": 2908
+  },
+  "w046": {
+   "pairs": 6152,
+   "pairs_diff": 1717,
+   "truth_pairs": 4318,
+   "truth_pair_agree": 3617
+  }
+ },
+ "per_mesh_note": "truth_pair_agree / truth_pairs = how often the hi-res truth agrees with the fibres on related node pairs"
+}

@@ -1,0 +1,32 @@
+{
+ "version": "v3-dev-sb-0139-2026-10-25",
+ "primary": "primary",
+ "a_radius_mm": 0.5,
+ "points": {
+  "primary": {
+   "a_support": 5,
+   "step_u": 0.999,
+   "step_min_nodes": 8,
+   "o_min_vertices": 8,
+   "relabel_u": 0.998175,
+   "cross_u": 0.992475,
+   "plateau_min_mm2": 2.0
+  },
+  "conservative": {
+   "a_support": 8,
+   "step_u": 0.998,
+   "step_min_nodes": 8,
+   "o_min_vertices": 8,
+   "relabel_u": 0.998175,
+   "cross_u": 0.992475,
+   "plateau_min_mm2": 2.0
+  }
+ },
+ "notes": {
+  "fit_on": "SwitchBench-natural (dev for v3, kit negatives) + PHerc0139 planted splices (check)",
+  "primary_sb": "A5 | step(0.999, >= 8 nodes) | relabel: 64/162 confirmed at 0.53 / 100 mm",
+  "conservative_sb": "A8 | step(0.998, >= 8 nodes) | relabel: 54/162 at 0.37 / 100 mm",
+  "o_rule": "autopsy: >= 8 vertices off recto (30.9 % at 0.24 on SB); only when the growth prediction is known",
+  "cross_relabel": "v2 single-channel thresholds (PHerc0139 dev, FA 0.1 / cm2)"
+ }
+}

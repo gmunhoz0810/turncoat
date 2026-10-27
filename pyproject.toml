@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "turncoat"
+version = "1.0.0"
+description = "Whole-segment sheet-switch review map for tifxyz segments of the Herculaneum scrolls, shown in VC3D."
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.10"
+dependencies = [
+  "numpy>=1.24",
+  "scipy>=1.10",
+  "tifffile>=2023.1",
+  "numcodecs>=0.12",
+  "pillow>=9.0",
+  "certifi>=2023.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7", "ruff>=0.5"]
+gpu = ["torch>=2.4"]
+
+[project.scripts]
+turncoat = "turncoat.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+"turncoat.alarms" = ["*.json"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 140
+
+[tool.ruff.lint]
+select = ["E", "F", "W"]

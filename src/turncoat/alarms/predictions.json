@@ -1,0 +1,343 @@
+{
+ "source": "https://vesuvius-challenge-open-data.s3.us-east-1.amazonaws.com",
+ "listed": "2026-10-24",
+ "note": "surface predictions per scroll (scan id = first timestamp; level = the scan pyramid level whose voxel frame the prediction is in)",
+ "scrolls": {
+  "PHerc0009B": [
+   {
+    "scan": "20260319104112",
+    "model": "m7-L2-th0.2",
+    "level": 2,
+    "path": "PHerc0009B/representations/predictions/surfaces/20260319104112-surface-20260413222639-surface-m7-L2-th0.2.zarr"
+   }
+  ],
+  "PHerc0125": [
+   {
+    "scan": "20250821151825",
+    "model": "m7-L0-th0.2",
+    "level": 0,
+    "path": "PHerc0125/representations/predictions/surfaces/20250821151825-surface-20260413222639-surface-m7-L0-th0.2.zarr"
+   }
+  ],
+  "PHerc0139": [
+   {
+    "scan": "20250728140407",
+    "model": "recto-090",
+    "level": 0,
+    "path": "PHerc0139/representations/predictions/surfaces/20250728140407-surface-20250701154204-surface-recto-090.zarr"
+   },
+   {
+    "scan": "20250728140407",
+    "model": "m7-L0-th0.2",
+    "level": 0,
+    "path": "PHerc0139/representations/predictions/surfaces/20250728140407-surface-20260413222639-surface-m7-L0-th0.2.zarr"
+   },
+   {
+    "scan": "20260102150214",
+    "model": "recto-2um-ps192-L0-th0.5",
+    "level": 0,
+    "path": "PHerc0139/representations/predictions/surfaces/20260102150214-surface-20260203205514-surface-recto-2um-ps192-L0-th0.5.zarr"
+   }
+  ],
+  "PHerc0175A": [
+   {
+    "scan": "20250521115057",
+    "model": "m7-L0-th0.2",
+    "level": 0,
+    "path": "PHerc0175A/representations/predictions/surfaces/20250521115057-surface-20260413222639-surface-m7-L0-th0.2.zarr"
+   }
+  ],
+  "PHerc0175B": [
+   {
+    "scan": "20250521125822",
+    "model": "m7-L0-th0.2",
+    "level": 0,
+    "path": "PHerc0175B/representations/predictions/surfaces/20250521125822-surface-20260413222639-surface-m7-L0-th0.2.zarr"
+   }
+  ],
+  "PHerc0191": [
+   {
+    "scan": "20250821151635",
+    "model": "m7-L0-th0.2",
+    "level": 0,
+    "path": "PHerc0191/representations/predictions/surfaces/20250821151635-surface-20260413222639-surface-m7-L0-th0.2.zarr"
+   }
+  ],
+  "PHerc0211": [
+   {
+    "scan": "20250821151803",
+    "model": "m7-L0-th0.2",
+    "level": 0,
+    "path": "PHerc0211/representations/predictions/surfaces/20250821151803-surface-20260413222639-surface-m7-L0-th0.2.zarr"
+   }
+  ],
+  "PHerc0257": [
+   {
+    "scan": "20250821151750",
+    "model": "m7-L0-th0.2",
+    "level": 0,
+    "path": "PHerc0257/representations/predictions/surfaces/20250821151750-surface-20260413222639-surface-m7-L0-th0.2.zarr"
+   }
+  ],
+  "PHerc0268": [
+   {
+    "scan": "20251110183117",
+    "model": "m7-L0-th0.2",
+    "level": 0,
+    "path": "PHerc0268/representations/predictions/surfaces/20251110183117-surface-20260413222639-surface-m7-L0-th0.2.zarr"
+   }
+  ],
+  "PHerc0306B": [
+   {
+    "scan": "20250521133212",
+    "model": "m7-L0-th0.2",
+    "level": 0,
+    "path": "PHerc0306B/representations/predictions/surfaces/20250521133212-surface-20260413222639-surface-m7-L0-th0.2.zarr"
+   }
+  ],
+  "PHerc0332": [
+   {
+    "scan": "20251211183505",
+    "model": "m7-L2-th0.2",
+    "level": 2,
+    "path": "PHerc0332/representations/predictions/surfaces/20251211183505-surface-20260413222639-surface-m7-L2-th0.2.zarr"
+   }
+  ],
+  "PHerc0343": [
+   {
+    "scan": "20250521140437",
+    "model": "m7-L0-th0.2",
+    "level": 0,
+    "path": "PHerc0343/representations/predictions/surfaces/20250521140437-surface-20260413222639-surface-m7-L0-th0.2.zarr"
+   }
+  ],
+  "PHerc0343P": [
+   {
+    "scan": "20260304131111",
+    "model": "m7-L2-th0.2",
+    "level": 2,
+    "path": "PHerc0343P/representations/predictions/surfaces/20260304131111-surface-20260413222639-surface-m7-L2-th0.2.zarr"
+   }
+  ],
+  "PHerc0358": [
+   {
+    "scan": "20250821151737",
+    "model": "m7-L0-th0.2",
+    "level": 0,
+    "path": "PHerc0358/representations/predictions/surfaces/20250821151737-surface-20260413222639-surface-m7-L0-th0.2.zarr"
+   }
+  ],
+  "PHerc0483A": [
+   {
+    "scan": "20250521140913",
+    "model": "m7-L0-th0.2",
+    "level": 0,
+    "path": "PHerc0483A/representations/predictions/surfaces/20250521140913-surface-20260413222639-surface-m7-L0-th0.2.zarr"
+   }
+  ],
+  "PHerc0483B": [
+   {
+    "scan": "20251124083638",
+    "model": "m7-L0-th0.2",
+    "level": 0,
+    "path": "PHerc0483B/representations/predictions/surfaces/20251124083638-surface-20260413222639-surface-m7-L0-th0.2.zarr"
+   }
+  ],
+  "PHerc0490A": [
+   {
+    "scan": "20250521151210",
+    "model": "m7-L0-th0.2",
+    "level": 0,
+    "path": "PHerc0490A/representations/predictions/surfaces/20250521151210-surface-20260413222639-surface-m7-L0-th0.2.zarr"
+   }
+  ],
+  "PHerc0490B": [
+   {
+    "scan": "20250521151215",
+    "model": "m7-L0-th0.2",
+    "level": 0,
+    "path": "PHerc0490B/representations/predictions/surfaces/20250521151215-surface-20260413222639-surface-m7-L0-th0.2.zarr"
+   }
+  ],
+  "PHerc0500P2": [
+   {
+    "scan": "20250526151718",
+    "model": "m7-L2-th0.2",
+    "level": 2,
+    "path": "PHerc0500P2/representations/predictions/surfaces/20250526151718-surface-20260413222639-surface-m7-L2-th0.2.zarr"
+   },
+   {
+    "scan": "20250820143440",
+    "model": "m7-L0-th0.2",
+    "level": 0,
+    "path": "PHerc0500P2/representations/predictions/surfaces/20250820143440-surface-20260413222639-surface-m7-L0-th0.2.zarr"
+   }
+  ],
+  "PHerc0800": [
+   {
+    "scan": "20250521135224",
+    "model": "m7-L0-th0.2",
+    "level": 0,
+    "path": "PHerc0800/representations/predictions/surfaces/20250521135224-surface-20260413222639-surface-m7-L0-th0.2.zarr"
+   }
+  ],
+  "PHerc0813": [
+   {
+    "scan": "20250821151723",
+    "model": "m7-L0-th0.2",
+    "level": 0,
+    "path": "PHerc0813/representations/predictions/surfaces/20250821151723-surface-20260413222639-surface-m7-L0-th0.2.zarr"
+   }
+  ],
+  "PHerc0814": [
+   {
+    "scan": "20250804134230",
+    "model": "m7-L0-th0.2",
+    "level": 0,
+    "path": "PHerc0814/representations/predictions/surfaces/20250804134230-surface-20260413222639-surface-m7-L0-th0.2.zarr"
+   },
+   {
+    "scan": "20260309142202",
+    "model": "m7-L2-th0.2",
+    "level": 2,
+    "path": "PHerc0814/representations/predictions/surfaces/20260309142202-surface-20260413222639-surface-m7-L2-th0.2.zarr"
+   }
+  ],
+  "PHerc0826": [
+   {
+    "scan": "20250821151701",
+    "model": "m7-L0-th0.2",
+    "level": 0,
+    "path": "PHerc0826/representations/predictions/surfaces/20250821151701-surface-20260413222639-surface-m7-L0-th0.2.zarr"
+   }
+  ],
+  "PHerc0841": [
+   {
+    "scan": "20250821151531",
+    "model": "m7-L0-th0.2",
+    "level": 0,
+    "path": "PHerc0841/representations/predictions/surfaces/20250821151531-surface-20260413222639-surface-m7-L0-th0.2.zarr"
+   },
+   {
+    "scan": "20260319124803",
+    "model": "m7-L2-th0.2",
+    "level": 2,
+    "path": "PHerc0841/representations/predictions/surfaces/20260319124803-surface-20260413222639-surface-m7-L2-th0.2.zarr"
+   }
+  ],
+  "PHerc0846A": [
+   {
+    "scan": "20250728152254",
+    "model": "m7-L0-th0.2",
+    "level": 0,
+    "path": "PHerc0846A/representations/predictions/surfaces/20250728152254-surface-20260413222639-surface-m7-L0-th0.2.zarr"
+   },
+   {
+    "scan": "20260319102732",
+    "model": "m7-L2-th0.2",
+    "level": 2,
+    "path": "PHerc0846A/representations/predictions/surfaces/20260319102732-surface-20260413222639-surface-m7-L2-th0.2.zarr"
+   }
+  ],
+  "PHerc0846B": [
+   {
+    "scan": "20250804142305",
+    "model": "m7-L0-th0.2",
+    "level": 0,
+    "path": "PHerc0846B/representations/predictions/surfaces/20250804142305-surface-20260413222639-surface-m7-L0-th0.2.zarr"
+   }
+  ],
+  "PHerc1203": [
+   {
+    "scan": "20250820131727",
+    "model": "m7-L0-th0.2",
+    "level": 0,
+    "path": "PHerc1203/representations/predictions/surfaces/20250820131727-surface-20260413222639-surface-m7-L0-th0.2.zarr"
+   },
+   {
+    "scan": "20260319130212",
+    "model": "m7-L2-th0.2",
+    "level": 2,
+    "path": "PHerc1203/representations/predictions/surfaces/20260319130212-surface-20260413222639-surface-m7-L2-th0.2.zarr"
+   }
+  ],
+  "PHerc1218": [
+   {
+    "scan": "20250521120456",
+    "model": "m7-L0-th0.2",
+    "level": 0,
+    "path": "PHerc1218/representations/predictions/surfaces/20250521120456-surface-20260413222639-surface-m7-L0-th0.2.zarr"
+   }
+  ],
+  "PHerc1299": [
+   {
+    "scan": "20260309130042",
+    "model": "m7-L2-th0.2",
+    "level": 2,
+    "path": "PHerc1299/representations/predictions/surfaces/20260309130042-surface-20260413222639-surface-m7-L2-th0.2.zarr"
+   }
+  ],
+  "PHerc1447": [
+   {
+    "scan": "20250521151220",
+    "model": "m7-L0-th0.2",
+    "level": 0,
+    "path": "PHerc1447/representations/predictions/surfaces/20250521151220-surface-20260413222639-surface-m7-L0-th0.2.zarr"
+   }
+  ],
+  "PHerc1451": [
+   {
+    "scan": "20260319101107",
+    "model": "m7-L2-th0.2",
+    "level": 2,
+    "path": "PHerc1451/representations/predictions/surfaces/20260319101107-surface-20260413222639-surface-m7-L2-th0.2.zarr"
+   }
+  ],
+  "PHerc1545": [
+   {
+    "scan": "20250821151648",
+    "model": "m7-L0-th0.2",
+    "level": 0,
+    "path": "PHerc1545/representations/predictions/surfaces/20250821151648-surface-20260413222639-surface-m7-L0-th0.2.zarr"
+   }
+  ],
+  "PHercMAN5": [
+   {
+    "scan": "20260311104824",
+    "model": "m7-L2-th0.2",
+    "level": 2,
+    "path": "PHercMAN5/representations/predictions/surfaces/20260311104824-surface-20260413222639-surface-m7-L2-th0.2.zarr"
+   }
+  ],
+  "PHercMANB": [
+   {
+    "scan": "20260323091048",
+    "model": "m7-L2-th0.2",
+    "level": 2,
+    "path": "PHercMANB/representations/predictions/surfaces/20260323091048-surface-20260413222639-surface-m7-L2-th0.2.zarr"
+   }
+  ],
+  "PHercMANBp": [
+   {
+    "scan": "20251216152116",
+    "model": "m7-L2-th0.2",
+    "level": 2,
+    "path": "PHercMANBp/representations/predictions/surfaces/20251216152116-surface-20260413222639-surface-m7-L2-th0.2.zarr"
+   }
+  ],
+  "PHercParis4": [
+   {
+    "scan": "20260411134726",
+    "model": "recto-2um-ps256-L0-th0.45",
+    "level": 0,
+    "path": "PHercParis4/representations/predictions/surfaces/20260411134726-surface-20260413141734-surface-recto-2um-ps256-L0-th0.45.zarr"
+   },
+   {
+    "scan": "20260411134726",
+    "model": "m7-L2-th0.2",
+    "level": 2,
+    "path": "PHercParis4/representations/predictions/surfaces/20260411134726-surface-20260413222639-surface-m7-L2-th0.2.zarr"
+   }
+  ]
+ }
+}
