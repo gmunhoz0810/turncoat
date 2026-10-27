@@ -1,7 +1,9 @@
 # Evidence index
 
 Where every number in the README, the video, the form answer and the Discord post comes from. `python evidence/score.py`
-recomputes all rates from the stored counts; `pytest tests/test_evidence.py` checks they match.
+recomputes all rates from the stored counts; `pytest tests/test_evidence.py` checks they match. From the per-node labels
+and flags in [bench/](bench/), `turncoat bench score --flags bench/flags/turncoat` (and `.../tifxyz-doctor`) recomputes
+the counts themselves; `pytest tests/test_bench.py` checks them against `evidence/`.
 
 | number | meaning | source |
 |---|---|---|

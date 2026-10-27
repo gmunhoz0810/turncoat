@@ -57,6 +57,11 @@ Per scroll (node exact, F1, Turncoat / tifxyz-doctor):
   [PREREG.md](PREREG.md) before one scoring run on the 12 test meshes.
 - **Reproduce:** `python evidence/score.py` recomputes every number above from the stored counts in `evidence/`.
 
+## Benchmark
+
+The per-node labels of all 14 meshes, the fibre pairs and a scorer are in [bench/](bench/): score your own detector
+with `turncoat bench score --flags DIR`, or inspect our truth in VC3D.
+
 ## How it works
 
 - **dinovol embeddings** (the organisers' public model) are sampled along every node normal of the segment.

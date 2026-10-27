@@ -36,6 +36,41 @@ def _check(argv: list[str]) -> int:
     return 0
 
 
+def _bench(argv: list[str]) -> int:
+    import json
+
+    from .bench import BenchError, load_bench, report, score, write_vc3d
+    from .tifxyz import TifxyzError
+    ap = argparse.ArgumentParser(prog="turncoat bench", description="Sheet-switch benchmark (labels in bench/).")
+    sub = ap.add_subparsers(dest="cmd", required=True)
+    sc = sub.add_parser("score", help="score a detector's per-node flags (one file per mesh) against the labels")
+    sc.add_argument("--flags", required=True, help="folder with KEY.png / .npy / .npz / .tif per mesh (see bench/README.md)")
+    sc.add_argument("--bench", help="benchmark folder (default: ./bench, else the one next to this package)")
+    sc.add_argument("--split", choices=("test", "dev", "all"), default="test", help="meshes to score (default: test)")
+    sc.add_argument("--meshes", help="comma-separated mesh keys, instead of a whole split")
+    sc.add_argument("--json", help="also write the full result (per-mesh counts) to this file")
+    vc = sub.add_parser("vc3d", help="write a mesh's labels into its downloaded tifxyz folder as VC3D overlay layers")
+    vc.add_argument("segment", help="the published tifxyz folder of that mesh (see bench/manifest.json)")
+    vc.add_argument("--mesh", required=True, help="mesh key, e.g. w034")
+    vc.add_argument("--bench", help="benchmark folder (default: ./bench, else the one next to this package)")
+    a = ap.parse_args(argv)
+    try:
+        b = load_bench(a.bench)
+        if a.cmd == "vc3d":
+            print("wrote " + ", ".join(write_vc3d(a.segment, a.mesh, b)))
+            return 0
+        meshes = [m.strip() for m in a.meshes.split(",") if m.strip()] if a.meshes else None
+        res = score(a.flags, b, a.split, meshes)
+    except (BenchError, TifxyzError, OSError) as exc:
+        print(f"turncoat bench: {exc}", file=sys.stderr)
+        return 2
+    print(report(res))
+    if a.json:
+        with open(a.json, "w") as f:
+            json.dump(res, f, indent=1)
+    return 0
+
+
 def main(argv: list[str] | None = None) -> int:
     argv = list(sys.argv[1:] if argv is None else argv)
     if not argv or argv[0] in ("-h", "--help"):
@@ -43,6 +78,7 @@ def main(argv: list[str] | None = None) -> int:
               "  turncoat check SEGMENT --volume URL [--write-to-segment]   review map (CPU)\n"
               "  turncoat embed SEGMENT --volume URL --ckpt teacher.pt     dinovol embeddings (GPU only)\n"
               "  turncoat prefetch SEGMENT --volume URL --local DIR        copy the CT chunks embed needs (GPU box)\n"
+              "  turncoat bench score --flags DIR                          score a detector on the benchmark\n"
               "\nRun `turncoat COMMAND --help` for the options.")
         return 0
     cmd, rest = argv[0], argv[1:]
@@ -57,7 +93,9 @@ def main(argv: list[str] | None = None) -> int:
     if cmd == "prefetch":
         from .gpu.prefetch_ct import main as prefetch
         return prefetch(rest)
-    print(f"turncoat: unknown command {cmd!r} (check, embed, prefetch)", file=sys.stderr)
+    if cmd == "bench":
+        return _bench(rest)
+    print(f"turncoat: unknown command {cmd!r} (check, embed, prefetch, bench)", file=sys.stderr)
     return 2
 
 
