@@ -10,7 +10,8 @@ In the output folder:
 With --write-to-segment, also into the tifxyz folder:
   switch_likelihood.tif, suspicion.tif     surface channels (VC3D builds that list a segment's own channels)
   turncoat_switch_likelihood.png, turncoat_flagged.png, ink-detections.json
-      8-bit maps on the mesh grid plus their entries in ink-detections.json, which VC3D's Ink Detection overlay reads,
+      8-bit maps on the mesh grid (flagged pixels = FLAG_PNG_VALUE, orange under VC3D's "Fire" colormap) plus
+      their entries in ink-detections.json, which VC3D's Ink Detection overlay reads,
       so any recent VC3D shows the map over the segment without a plugin. Entries made by other tools are kept.
 It never writes x/y/z.tif, meta.json, mask.tif, approval.tif or corrections.json.
 """
@@ -31,6 +32,9 @@ INK_INDEX = "ink-detections.json"
 INK_LABELS = {"turncoat_switch_likelihood.png": "Turncoat switch likelihood",
               "turncoat_flagged.png": "Turncoat flagged regions"}
 COLLECTION_COLOUR = [1.0, 0.24, 0.96]
+# Value of a flagged pixel in turncoat_flagged.png. VC3D's Ink Detection overlay draws an 8-bit map through the chosen
+# colormap with alpha = value; with "Fire" (OpenCV COLORMAP_HOT) 164 maps to orange (255, 155, 0) at 64 % alpha.
+FLAG_PNG_VALUE = 164
 
 
 @dataclass(frozen=True)
@@ -153,7 +157,7 @@ def write_to_segment(seg_dir: Path, maps: dict[str, np.ndarray], meta: dict) -> 
         tifffile.imwrite(seg_dir / fn, a.astype(np.float32))
         written.append(fn)
     images = {"turncoat_switch_likelihood.png": maps["switch_likelihood"],
-              "turncoat_flagged.png": np.where(maps["suspicion"] >= 1.0, 1.0, 0.0)}
+              "turncoat_flagged.png": np.where(maps["suspicion"] >= 1.0, FLAG_PNG_VALUE / 255.0, 0.0)}
     seg_id = seg_dir.name
     long_id = str(meta.get("uuid") or seg_id)
     entries = []

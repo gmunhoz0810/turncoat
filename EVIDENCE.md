@@ -19,7 +19,7 @@ recomputes all rates from the stored counts; `pytest tests/test_evidence.py` che
 | "misses about half" | 1 - recall 47.8 % = 52.2 % | `evidence/fresh12_node_exact.json` |
 | w025: 129 of 197 flagged scored nodes false | per_mesh.w025.turncoat tp 68, fp 129 | same file |
 | about 15 min on a laptop, under 3.5 GB | full `turncoat check` on published w034 (117,276 nodes) on an Apple-silicon MacBook: 923.7 s, peak RSS 3.30 GB | measured 2026-10-27 (summary.json "seconds" of that run) |
-| 2 min 20 s in the video | the same check with the leave / step alarms cached, 32-core Linux box | the screen recording |
+| 3 min 36 s in the video | the same check with the leave / step alarms cached, 32-vCPU Linux box | the screen recording |
 | 4-15 min per segment on one RTX 4090 | dinovol embeddings, 213-883 s measured per mesh | development log, 2026-10-25 |
 | 27 regions, 34,131 flagged nodes on w034 | output of the demo run | `turncoat check` printout in the video |
 

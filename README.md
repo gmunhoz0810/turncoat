@@ -4,7 +4,7 @@
 
 ![Turncoat in VC3D: flagged regions on PHerc0139 segment w034, then the sheet jump in the CT](docs/img/hero.gif)
 
-**Video (1:51):** [docs/turncoat.mp4](docs/turncoat.mp4)
+**Video (1:55):** [docs/turncoat.mp4](docs/turncoat.mp4)
 
 ## Install and run
 
@@ -21,10 +21,11 @@ dinovol embeddings in `SEGMENT/turncoat/embeddings.npz`, made once on a GPU (see
 ## See it in VC3D (stock, no plugin)
 
 1. Open your project in VC3D and select the segment.
-2. Open the **Ink Detection** dock. Pick **Turncoat flagged regions** (or **Turncoat switch likelihood**) and a colormap.
+2. Open the **Ink Detection** dock. Pick **Turncoat flagged regions**, Colormap **Fire**, opacity up (80-100 %): flagged
+   regions show in orange. (**Turncoat switch likelihood** is the continuous 0-1 map.)
 3. Ctrl+click a flagged border: the slice views jump there and show where the trace changes sheet.
 
-| 1. pick the Turncoat layer | 2. flagged regions on the segment | 3. the slice at a flagged border (circle: the trace crosses onto the next sheet) |
+| 1. Turncoat layer, Colormap: Fire | 2. flagged regions (orange) on the segment | 3. the slices at a flagged border after ctrl+click |
 |---|---|---|
 | ![](docs/img/vc3d_1_dock.png) | ![](docs/img/vc3d_2_overlay.png) | ![](docs/img/vc3d_3_jump.png) |
 

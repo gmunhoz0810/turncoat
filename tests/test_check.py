@@ -7,6 +7,7 @@ import pytest
 import tifffile
 from PIL import Image
 
+from turncoat import outputs as O
 from turncoat.check import CheckError, run_check
 from turncoat.cli import main
 from turncoat.tifxyz import write_tifxyz
@@ -51,7 +52,8 @@ def test_check_flags_the_switched_side_and_writes_outputs(switched, m7_zarr, tmp
     assert {e["local_file"] for e in ink} == {"turncoat_switch_likelihood.png", "turncoat_flagged.png"}
     assert all(e["segment_id"] == "seg_w001" for e in ink)
     png = np.asarray(Image.open(seg / "turncoat_flagged.png"))
-    assert png.dtype == np.uint8 and png.shape == shift.shape and set(np.unique(png)) <= {0, 255}
+    assert png.dtype == np.uint8 and png.shape == shift.shape and set(np.unique(png).tolist()) == {0, O.FLAG_PNG_VALUE}
+    assert ((png > 0) == flagged).all()
     assert (seg / "switch_likelihood.tif").exists() and (seg / "x.tif").exists()
 
 
